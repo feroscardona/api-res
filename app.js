@@ -1,6 +1,6 @@
 const express = require('express') // instalar express con npm xpress -E
-const movies = require('./movies.json')
-const products = require('./products.json')
+const movies = require('./db/movies.json')
+const products = require('./db/products.json')
 const crypto = require('node:crypto')
 const { validateMovie, validatePartialMovie } = require('./schemas/movieSchema')
 const cors = require('cors')
