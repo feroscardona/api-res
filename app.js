@@ -26,6 +26,10 @@ app.use(cors({
 
 app.use(express.json())
 
+app.get('/', (req, res) => {
+  res.send('Welcome to My API')
+})
+
 app.get('/products', (req, res) => {
   res.json(products)
 })
