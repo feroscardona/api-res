@@ -1,0 +1,35 @@
+### pagina de entrada
+GET http://localhost:3000/
+
+### recupera todas las peliculas
+GET http://localhost:3000/movies
+
+### recuperar una pelicula por id
+GET http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+### recuperar todas las peliculas por genero
+GET http://localhost:3000/movies/?genre=action
+
+### crea una pelicula con POST
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+"title": "las cabras locas",
+"year": 1994,
+"director": "Oscar Cardona",
+"duration": 142,
+"poster": "https://www.bing.com/images/create/postes-de-una-pelc3adcula-llamada-las-cabras-locas2c-t/1-6557c5931ddb4cc583ab07c21df5fab4?id=GXn3rLX8GrmTMYOfztDG9w%3d%3d&view=detailv2&idpp=genimg&darkschemeovr=1&edgehub=1&FORM=GCRIDP",
+"genre": [
+    "Comedy"
+],
+"rate": 9.3
+}
+
+### actualizar una parte de la pelicula por id
+PATCH http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+    "year": 1943
+}
